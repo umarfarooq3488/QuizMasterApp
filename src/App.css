@@ -1,0 +1,12 @@
+/* styles.css or a similar CSS file */
+.custom-link {
+    text-decoration: none;
+    /* color: #1f2937; Customize the color to match your design */
+    transition: color 0.3s ease;
+    color: white
+  }
+  
+  .custom-link:hover {
+    color: #cccccc; /* Customize the hover color */
+  }
+  
