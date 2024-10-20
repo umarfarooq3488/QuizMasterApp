@@ -74,7 +74,7 @@ const Quiz = () => {
   }, 2000);
 
   return (
-    <div className="min-h-screen h-full dark:bg-gray-950 bg-gray-50">
+    <div className="min-h-screen h-full dark:bg-gray-950 bg-gray-200">
       <div className="header">
         <h1 className="text-4xl text-center font-bold dark:text-gray-200 py-5">
           Quiz App
@@ -124,7 +124,7 @@ const Quiz = () => {
             Submit Your Quiz
           </button>
           {showResult && (
-            <p>
+            <p className="dark:text-gray-200 my-4">
               You have scored {correctAnswer} out of {totalQsInCategory}
             </p>
           )}

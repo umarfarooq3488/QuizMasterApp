@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import ToggleBtn from "./ToggleBtn";
 
 const Header = () => {
@@ -10,34 +10,46 @@ const Header = () => {
       <div className="flex justify-between items-center">
         {/* Project Name */}
         <div className="text-xl font-bold">
-          <Link
+          <NavLink
             to="/"
             className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
           >
             QuizMaster
-          </Link>
+          </NavLink>
         </div>
 
         {/* Navigation Tabs */}
         <nav className="md:flex text-lg hidden space-x-6">
-          <Link
+          <NavLink
             to="/"
-            className="hover:text-blue-600 dark:hover:text-blue-400 text-gray-600 dark:text-gray-300 transition-all duration-300 hover:scale-110"
+            className={({ isActive }) =>
+              isActive
+                ? "hover:text-blue-600 border-b-4 border-red-800 dark:hover:text-blue-400 transition-all duration-300"
+                : "hover:text-blue-600 hover:border-b-4 border-red-800 dark:hover:text-blue-400 text-gray-600 dark:text-gray-300 transition-all duration-300"
+            }
           >
             Home
-          </Link>
-          <Link
+          </NavLink>
+          <NavLink
             to="/categories"
-            className="hover:text-blue-600 dark:hover:text-blue-400 text-gray-600 dark:text-gray-300 transition-all duration-300 hover:scale-110"
+            className={({ isActive }) =>
+              isActive
+                ? "hover:text-blue-600 border-b-4 border-red-800 dark:hover:text-blue-400 transition-all duration-300"
+                : "hover:text-blue-600 hover:border-b-4 border-red-800 dark:hover:text-blue-400 text-gray-600 dark:text-gray-300 transition-all duration-300"
+            }
           >
             Categories
-          </Link>
-          <Link
+          </NavLink>
+          <NavLink
             to="/about"
-            className="hover:text-blue-600 dark:hover:text-blue-400 text-gray-600 dark:text-gray-300 transition-all duration-300 hover:scale-110"
+            className={({ isActive }) =>
+              isActive
+                ? "border-b-4 border-red-800 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-300"
+                : "hover:text-blue-600 hover:border-b-4 border-red-800 dark:hover:text-blue-400 text-gray-600 dark:text-gray-300 transition-all duration-300"
+            }
           >
             About Us
-          </Link>
+          </NavLink>
         </nav>
 
         {/* Login/Signup Buttons */}
@@ -80,24 +92,24 @@ const Header = () => {
         <>
           <div className="md:hidden mt-4">
             <nav className="flex flex-col">
-              <Link
+              <NavLink
                 to="/"
                 className="hover:text-blue-600 dark:hover:text-blue-400 text-gray-600 dark:text-gray-300 transition-all duration-300 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-md p-3"
               >
                 Home
-              </Link>
-              <Link
+              </NavLink>
+              <NavLink
                 to="/categories"
                 className="hover:text-blue-600 dark:hover:text-blue-400 text-gray-600 dark:text-gray-300 transition-all duration-300 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-md p-3"
               >
                 Categories
-              </Link>
-              <Link
+              </NavLink>
+              <NavLink
                 to="/about"
                 className="hover:text-blue-600 dark:hover:text-blue-400 text-gray-600 dark:text-gray-300 transition-all duration-300 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-md p-3"
               >
                 About Us
-              </Link>
+              </NavLink>
             </nav>
           </div>
 

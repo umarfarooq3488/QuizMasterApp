@@ -2,8 +2,8 @@ import React from "react";
 
 const AboutUs = () => {
   return (
-    <div className="bg-gradient-to-b from-indigo-600 to-purple-600 min-h-screen flex items-center justify-center py-10 px-6">
-      <div className="bg-gray-200 dark:bg-gray-900 rounded-lg shadow-lg max-w-4xl w-full p-8 md:p-12 transform transition-all duration-500 hover:scale-105 hover:shadow-2xl">
+    <div className="bg-gradient-to-b from-indigo-600 to-purple-600 min-h-[83vh] flex items-center justify-center py-10 px-6">
+      <div className="bg-gray-200 dark:bg-gray-900 mt-12 md:mt-0 rounded-lg shadow-lg max-w-4xl w-full p-8 md:p-12 transform transition-all duration-500 hover:scale-105 hover:shadow-2xl">
         <h1 className="text-4xl font-bold dark:text-gray-200 text-gray-800 text-center mb-8 animate-fadeIn">
           About Us
         </h1>

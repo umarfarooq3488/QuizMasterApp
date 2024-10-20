@@ -34,14 +34,14 @@ const Question = ({
 
   const backgroundColor =
     showResult && trackAnswer[id] === true
-      ? "bg-green-200"
-      : showResult && "bg-red-200";
+      ? "bg-green-200 dark:bg-green-900"
+      : showResult && "bg-red-200 dark:bg-red-900";
 
   return (
     <div className="flex justify-center items-center md:my-5 my-2 ">
       <div
         key={id}
-        className={`md:p-6 p-2 ${backgroundColor} dark:bg-gray-900 bg-gray-100 rounded-lg flex flex-col min-w-[310px] w-1/2 flex-wrap shadow-xl`}
+        className={`md:p-6 p-2 ${backgroundColor} dark:bg-gray-900 bg-blue-50 rounded-lg flex flex-col min-w-[310px] w-1/2 flex-wrap shadow-xl`}
       >
         <h2 className="text-xl font-bold mb-4 dark:text-gray-100">
           {question}
@@ -68,16 +68,18 @@ const Question = ({
           } items-center`}
         >
           {showResult && trackAnswer[id] === false && (
-            <p className="text-xl font-medium ">
+            <p className="text-xl dark:text-white font-medium ">
               The correct answer is:{" "}
-              <span className="text-blue-500 font-bold">{correctAns}</span>
+              <span className="text-blue-500 dark:text-blue-300 font-bold">
+                {correctAns}
+              </span>
             </p>
           )}
           <div className="flex-grow" />{" "}
           {/* This empty div will take up the remaining space */}
           <button
             onClick={handleSave}
-            className="text-end py-2 px-4 hover:bg-blue-600 bg-blue-500 text-white rounded-md font-bold"
+            className="text-end py-2 px-4 hover:bg-teal-600 bg-teal-500 text-white rounded-md font-bold"
           >
             {saved ? "Saved" : "Save"}
           </button>
